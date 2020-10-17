@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "title": "Suicide Rate 2015",
+  "title": "Global Suicide Rate for 2015",
   "width": 800,
   "height": 600,
   "data": {
@@ -29,6 +29,7 @@
     },
   "encoding": {
     "color": {
+      "scale": {"scheme": "reds"},
       "field": "SuicideRate_2015",
       "type": "quantitative"
     },
