@@ -7,23 +7,37 @@
 
  "transform": [
     {
-      "joinaggregate": [{"op": "mean","field": "gdp_per_capita ($)","as": "mean1"}],
+      "joinaggregate": [{"op": "mean","field": "gdp_per_capita ($)","as": "gdp_per_capita (mean)"}],
       "groupby": ["country"]
     },
     {
-      "joinaggregate": [{"op": "mean","field": "suicides/100k pop","as": "mean2"}],
+      "joinaggregate": [{"op": "mean","field": "suicides/100k pop","as": "suicides/100k pop (mean)"}],
       "groupby": ["country"]
     }
   ],
-  "mark": "circle",
+  "mark": {
+    "type": "circle",
+    "size": 60
+  },
+  "selection": {
+        "myCountry": {"type": "multi", "fields": ["country"], "bind": "legend"}
+      },
   "encoding": {
-    "x": {"field": "mean1", "type": "quantitative",
+    "x": {"field": "gdp_per_capita (mean)", "type": "quantitative",
       "title": "GDP per capita ($)"},
-    "y": {"field": "mean2", "type": "quantitative", "title": "Average Suicides per 100k pop"},
+    "y": {"field": "suicides/100k pop (mean)", "type": "quantitative", "title": "Average Suicides per 100k pop"},
+    "opacity": {
+          "condition": {
+            "selection": "myCountry",
+            "field": "country",
+            "type": "ordinal"
+          },
+          "value": 0
+        },
     "color": {"field": "country", "type": "nominal"},
     "tooltip": [
-      {"field": "mean1", "type": "quantitative"},
-      {"field": "mean2", "type": "quantitative"},
+      {"field": "gdp_per_capita (mean)", "type": "quantitative"},
+      {"field": "suicides/100k pop (mean)", "type": "quantitative"},
       {"field": "country", "type": "nominal"}
     ]
   }
