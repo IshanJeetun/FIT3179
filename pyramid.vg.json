@@ -17,7 +17,7 @@
       "y": {
         "field": "age", 
         "axis": null, 
-        "sort": "descending"
+        "sort": ["75+ years", "55-74 years", "35-54 years", "25-34 years", "15-24 years", "5-14 years"]
       },
       "x": {
         "aggregate": "average", 
@@ -42,7 +42,7 @@
       "y": {"field": "age", 
             "type": "ordinal", 
             "axis": null, 
-            "sort": "descending"},
+            "sort": ["75+ years", "55-74 years", "35-54 years", "25-34 years", "15-24 years", "5-14 years"]},
             "text": {"field": "age", "type": "ordinal"}
     }
   }, 
@@ -61,7 +61,7 @@
         "field": "age", 
         "title": null,
         "axis": null, 
-        "sort": "descending"
+        "sort": ["75+ years", "55-74 years", "35-54 years", "25-34 years", "15-24 years", "5-14 years"]
       },
       "x": {
         "aggregate": "average", 
@@ -76,7 +76,6 @@
   }],
   
   "config": {
-    "view": {"stroke": null},
-    "axis": {"grid": false}
+    "view": {"stroke": null}
   }
 }
