@@ -1,0 +1,82 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "description": "A population pyramid for the US in 2000.",
+  "data": { "url": "https://raw.githubusercontent.com/IshanJeetun/FIT3179/main/master.csv"},
+  "spacing": 0,
+  "hconcat": [
+    
+  {
+    "transform": [{
+      "filter": {"field": "sex", "equal": "female"}
+    }],
+    "title": "Female",
+    "width": 300,
+    "height": 200,
+    "mark": "bar",
+    "encoding": {
+      "y": {
+        "field": "age", 
+        "axis": null, 
+        "sort": "descending"
+      },
+      "x": {
+        "aggregate": "average", 
+        "field": "suicides_no",
+        "title": "Suicide rate",
+        "axis": {"format": "s"},
+        "sort": "descending"
+      },
+      "color": {
+        "field": "sex",
+        "scale": {"range": ["pink", "blue"]}
+      }
+    }
+  }, 
+  
+  {
+    "width": 80,
+    "height": 200,
+    "view": {"stroke": null},
+    "mark": {"type": "text", "align": "center"},
+    "encoding": {
+      "y": {"field": "age", 
+            "type": "ordinal", 
+            "axis": null, 
+            "sort": "descending"},
+            "text": {"field": "age", "type": "ordinal"}
+    }
+  }, 
+
+
+  {
+    "transform": [{
+      "filter": {"field": "sex", "equal": "male"}
+    }],
+    "title": "Male",
+        "width": 300,
+    "height": 200,
+    "mark": "bar",
+    "encoding": {
+      "y": {
+        "field": "age", 
+        "title": null,
+        "axis": null, 
+        "sort": "descending"
+      },
+      "x": {
+        "aggregate": "average", 
+        "field": "suicides_no",
+        "title": "Suicide rate",
+        "axis": {"format": "s"}
+      },
+      "color": {
+        "field": "sex"
+      }
+    }
+  }],
+  
+  "config": {
+    "view": {"stroke": null},
+    "axis": {"grid": false}
+  }
+}
