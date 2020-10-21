@@ -1,44 +1,38 @@
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "description": "Suicide and GDP per capita ",
-  "width": 800,
-  "height": 450,
-  "data": {"url": "https://raw.githubusercontent.com/IshanJeetun/FIT3179/main/master.csv"},
+ "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+ "width":800,
+ "height": 500,
+ "title": "Time series for suicide rate",
 
- "transform": [
-    {
-      "joinaggregate": [{"op": "mean","field": "gdp_per_capita ($)","as": "gdp_per_capita (mean)"}],
-      "groupby": ["country"]
-    },
-    {
-      "joinaggregate": [{"op": "mean","field": "suicides/100k pop","as": "suicides/100k pop (mean)"}],
-      "groupby": ["country"]
-    }
-  ],
-  "mark": {
-    "type": "circle",
-    "size": 60
-  },
-  "selection": {
-        "myCountry": {"type": "multi", "fields": ["country"], "bind": "legend"}
-      },
-  "encoding": {
-    "x": {"field": "gdp_per_capita (mean)", "type": "quantitative",
-      "title": "GDP per capita ($)"},
-    "y": {"field": "suicides/100k pop (mean)", "type": "quantitative", "title": "Average Suicides per 100k pop"},
-    "opacity": {
-          "condition": {
-            "selection": "myCountry",
-            "field": "country",
-            "type": "ordinal"
-          },
-          "value": 0
-        },
-    "color": {"field": "country", "type": "nominal"},
-    "tooltip": [
-      {"field": "gdp_per_capita (mean)", "type": "quantitative"},
-      {"field": "suicides/100k pop (mean)", "type": "quantitative"},
-      {"field": "country", "type": "nominal"}
-    ]
-  }
+ "data": {
+ "url": "https://raw.githubusercontent.com/IshanJeetun/FIT3179/main/master.csv"
+ },
+
+ "mark": "circle",
+
+ "encoding": {
+ "x": {
+ "field": "year",
+ "type": "nominal",
+ "title": "Confirmed Cases"
+ },
+
+ "y": {
+ "aggregate": "mean",
+ "field": "suicides_no",
+ "type": "quantitative"
+ },
+
+"color": {
+ "field": "country",
+ "type": "nominal"
+ },
+
+
+ "tooltip": [
+ {"field": "country", "type": "nominal"},
+ {"field": "gdp_per_capita ($)", "type": "quantitative"}
+ ]
+
+ }
 }
