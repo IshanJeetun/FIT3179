@@ -3,7 +3,6 @@
   "title": "Suicide number by age group",
   "height": {"step": 30},
   "width": 400,
-  "transform": [{"filter": "datum.year == 2000"}],
   "mark": "bar",
   "encoding": {
     "y": {"field": "age", "title": "Age group",
