@@ -1,0 +1,34 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "description": "A simple pie chart with embedded data.",
+  "title":"Suicide rate (%) per age group",
+   "height": 400,
+   "with": 100,
+  "data": { "name":"ishan", "url": "https://raw.githubusercontent.com/IshanJeetun/FIT3179/main/master.csv"},
+  "transform": [
+    {"calculate": "(datum.suicides_no / datum.population) * 100", "as": "rate"}
+  ],
+"encoding": {
+    "theta": {"aggregate": "average","field": "rate", "type": "quantitative", "stack": true},
+    "color": {"field": "age", "type": "nominal", "legend": null},
+    "tooltip":[ {"aggregate": "average", "field": "rate", "type": "quantitative", "title": "Suicide rate of age group(%)"},
+    {"field":"age", "title":"Age group"}]
+  },
+  "layer": [
+    {
+      "mark":{"type": "arc", "radius": 150}
+    },
+    {
+      "mark": {
+      "type": "text",
+       "radius": 180
+      },
+
+      "encoding": {
+      "text": {"field": "age", "type": "nominal"},
+      "color": {"value": "black"}
+      }
+    }
+  ],
+  "view": {"stroke": null}
+}
