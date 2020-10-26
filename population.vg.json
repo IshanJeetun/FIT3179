@@ -1,0 +1,30 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "data": { "url": "https://raw.githubusercontent.com/IshanJeetun/FIT3179/main/master.csv"},
+  "title": "Population difference for male and female",
+  "width": {"step": 40},
+  "height": 300,
+  "mark": "bar",
+  "encoding": {
+    "column": {
+      "field": "age", "type": "ordinal", "spacing": 10, "title": "Age group"
+    },
+    "y": {
+      "aggregate": "average", "field": "population",
+      "title": "population",
+      "axis": {"grid": false}
+    },
+    "x": {
+      "field": "sex",
+      "axis": {"title": ""}
+    },
+    "color": {
+      "field": "sex",
+      "scale": {"range": ["#675193", "#ca8861"]}
+    }
+  },
+  "config": {
+    "view": {"stroke": "transparent"},
+    "axis": {"domainWidth": 1}
+  }
+}
