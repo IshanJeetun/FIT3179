@@ -13,10 +13,10 @@
     "y": {
       "aggregate": "sum",
       "field": "suicides_no",
-      "title": "Total Suicide Number"
+      "title": "Total number of suicide"
     },
     "x": {"field": "year", "title": "Year"},
-    "color": {"field": "sex", "scale": {"range": ["#675193", "#ca8861"]}},
+    "color": {"field": "sex","scale": {"scheme": "greenblue"}},
      "tooltip": [
       {"field": "sex", "type": "nominal", "title": "Sex"},
       {"field": "year", "type": "quantitative"}
