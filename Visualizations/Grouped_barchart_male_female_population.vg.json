@@ -1,3 +1,4 @@
+  
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "data": { "url": "https://raw.githubusercontent.com/IshanJeetun/FIT3179/main/master.csv"},
@@ -16,11 +17,10 @@
     },
     "x": {
       "field": "sex",
-      "axis": {"title": ""}
+      "axis": {"title": "", "labelAngle": 0}
     },
     "color": {
-      "field": "sex",
-      "scale": {"range": ["#675193", "#ca8861"]}
+      "field": "sex","scale": {"scheme": "greenblue"}
     }
   },
   "config": {
