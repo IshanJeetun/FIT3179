@@ -24,7 +24,7 @@
   "encoding": {
     "x": {"field": "year", "title": "Year"},
     "y": {"aggregate":"sum", "field": "suicides_no", "type": "quantitative", "title": "Total number of suicides"},
-    "color": {"field": "age", "type": "nominal"},
+    "color": {"field": "age", "type": "nominal","scale": {"scheme": "tableau20"}, "legend":{"title": "Age group"}},
     "tooltip": [
       {"field": "age", "type": "nominal", "title": "Age group"},
       {"aggregate":"sum", "field": "suicides_no", "type": "quantitative", "title": "Total number of suicides"}
