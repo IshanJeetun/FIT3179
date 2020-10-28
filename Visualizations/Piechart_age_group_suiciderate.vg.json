@@ -3,7 +3,7 @@
   "description": "A simple pie chart with embedded data.",
   "title":"Suicide rate (%) per age group",
    "height": 200,
-   "width": 400,
+   "width": 200,
   "data": { "name":"ishan", "url": "https://raw.githubusercontent.com/IshanJeetun/FIT3179/main/master.csv"},
   "transform": [
     {"calculate": "(datum.suicides_no / datum.population) * 100", "as": "rate"}
@@ -19,12 +19,12 @@
   },
   "layer": [
     {
-      "mark":{"type": "arc", "radius": 150}
+      "mark":{"type": "arc", "radius": 100}
     },
     {
       "mark": {
       "type": "text",
-       "radius": 180
+       "radius": 120
       },
 
       "encoding": {
