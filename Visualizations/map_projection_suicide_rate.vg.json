@@ -2,7 +2,8 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "title": "Global Suicide Rate for 2015",
   "width": 800,
-  "height": 600,
+  "height": 500,
+  
   "data": {
     "url": "https://raw.githubusercontent.com/IshanJeetun/FIT3179/main/ne_110m.json",
     "format": {
@@ -21,17 +22,23 @@
       }
     }
   ],
+  
   "projection": {
     "type": "equirectangular"
   },
+
   "mark": {
     "type": "geoshape"
     },
+
   "encoding": {
     "color": {
-      "scale": {"scheme": "reds"},
+      "scale": {"type": "threshold",
+ "domain": [5, 10, 15, 20],
+ "scheme": "oranges"},
       "field": "SuicideRate_2015",
-      "type": "quantitative"
+      "type": "quantitative",
+      "legend":{"title":"Suicide rate"}
     },
     "tooltip": [
       {"field": "properties.NAME", "type": "nominal", "title": "Country"},
