@@ -14,7 +14,7 @@
       "value": 2016,
       "bind": {
         "input": "range",
-        "min": 1985,
+        "min": 1986,
         "max": 2016,
         "step": 1,
         "name": "Year"
