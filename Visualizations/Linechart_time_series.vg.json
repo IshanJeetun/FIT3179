@@ -5,7 +5,21 @@
   "title": "Change in suicide rate though time by age group",
   "data": {"url": "https://raw.githubusercontent.com/IshanJeetun/FIT3179/main/master.csv"},
   "transform": [
-    {"filter": "datum.year != 2016"}
+    {"filter": "datum.year != 2016"},
+    {"filter": "datum.year < year_below"}
+  ],
+    "params": [
+    {
+      "name": "year_below",
+      "value": 2016,
+      "bind": {
+        "input": "range",
+        "min": 1985,
+        "max": 2016,
+        "step": 1,
+        "name": "Year"
+      }
+    }
   ],
   "mark": {
     "type": "line",
