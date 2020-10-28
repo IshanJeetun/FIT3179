@@ -8,7 +8,7 @@
   "mark": "bar",
   "encoding": {
     "column": {
-      "field": "age", "type": "ordinal", "spacing": 10, "title": "Age group"
+      "field": "age", "type": "ordinal", "spacing": 10, "title": null
     },
     "y": {
       "aggregate": "average", "field": "population",
