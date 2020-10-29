@@ -12,5 +12,8 @@
       "title": "Total number of suicide"
     },
     "color": {"field": "age", "scale": {"scheme": "tableau20"},"legend": null}
+  },
+  "config": {
+    "background": "#EEEFF3"
   }
 }
