@@ -47,5 +47,8 @@
       "condition": {"selection": "group", "value": 1},
       "value": 0.2
     }
+  },
+  "config": {
+    "background": "#EEEFF3"
   }
 }
