@@ -57,15 +57,13 @@
    }
   }
   ,
-
   {
     "mark": {
       "type": "text",
-      "align": "right",
-      "baseline": "middle",
-      "dx": -12,
+      "baseline": "top",
+      "dy": -15,
       "fontSize": 11.5,
-      "fontStyle": "italic"
+      "fontStyle": "Calibri"
     },
     "encoding": {
       "text": {"field": "country", "type": "nominal"},
@@ -78,4 +76,5 @@
       "value": 0
       }
 }
-}]}
+}]
+}
