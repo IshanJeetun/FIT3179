@@ -3,7 +3,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "data": { "url": "https://raw.githubusercontent.com/IshanJeetun/FIT3179/main/master.csv"},
   "width": {"step": 40},
-  "height": 300,
+  "height": 310,
   "mark": "bar",
   "encoding": {
     "column": {
