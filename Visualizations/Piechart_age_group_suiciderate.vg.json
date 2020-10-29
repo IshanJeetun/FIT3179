@@ -1,7 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "description": "A simple pie chart with embedded data.",
-  "title":"Suicide rate (%) per age group",
    "height": 200,
    "width": 200,
   "data": { "name":"ishan", "url": "https://raw.githubusercontent.com/IshanJeetun/FIT3179/main/master.csv"},
