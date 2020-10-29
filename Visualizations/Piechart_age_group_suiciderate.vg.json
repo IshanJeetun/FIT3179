@@ -18,12 +18,12 @@
   },
   "layer": [
     {
-      "mark":{"type": "arc", "radius": 100}
+      "mark":{"type": "arc", "radius": 95}
     },
     {
       "mark": {
       "type": "text",
-       "radius": 120
+       "radius": 110
       },
 
       "encoding": {
