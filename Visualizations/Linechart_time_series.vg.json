@@ -2,7 +2,6 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "width": 600,
   "height": 300,
-  "title": "Change in suicide rate though time by age group",
   "data": {"url": "https://raw.githubusercontent.com/IshanJeetun/FIT3179/main/master.csv"},
   "transform": [
     {"filter": "datum.year != 2016"},
