@@ -44,6 +44,6 @@
       {"field": "SuicideRate_2015", "type": "quantitative"}
     ]
   },
-  "config": {"background": "#EEEFF3"}
+  "config": {"background": "null"}
 
 }
