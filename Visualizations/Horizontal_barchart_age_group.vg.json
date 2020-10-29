@@ -1,6 +1,5 @@
 {
   "data": { "url": "https://raw.githubusercontent.com/IshanJeetun/FIT3179/main/master.csv"},
-  "title": "Number of suicide by age group",
   "height": 200,
   "width": 400,
   "mark": "bar",
