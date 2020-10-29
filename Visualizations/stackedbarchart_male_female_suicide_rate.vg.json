@@ -21,5 +21,8 @@
       {"field": "sex", "type": "nominal", "title": "Sex"},
       {"field": "year", "type": "quantitative"}
     ]
+  },
+   "config": {
+    "background": "#EEEFF3"
   }
 }
