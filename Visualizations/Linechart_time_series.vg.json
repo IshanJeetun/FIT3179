@@ -21,11 +21,7 @@
     }
   ],
   "mark": {
-    "type": "line",
-      "point": {
-      "filled": true,
-      "size": 50
-    }
+    "type": "area"
   },
 
   "selection": {
