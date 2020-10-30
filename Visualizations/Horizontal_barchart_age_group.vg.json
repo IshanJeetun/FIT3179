@@ -1,6 +1,6 @@
 {
   "data": { "url": "https://raw.githubusercontent.com/IshanJeetun/FIT3179/main/master.csv"},
-  "height": 300,
+  "height": 280,
   "width": 400,
   "mark": "bar",
   "encoding": {
