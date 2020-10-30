@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "description": "A simple pie chart with embedded data.",
-   "height": 200,
-   "width": 200,
+   "height": 300,
+   "width": 300,
   "data": { "name":"ishan", "url": "https://raw.githubusercontent.com/IshanJeetun/FIT3179/main/master.csv"},
   "transform": [
     {"calculate": "(datum.suicides_no / datum.population) * 100", "as": "rate"}
@@ -13,17 +13,23 @@
       "type": "nominal", 
       "legend": null,
       "scale": {"scheme": "tableau20"}},
-    "tooltip":[ {"aggregate": "average", "field": "rate", "type": "quantitative", "title": "Suicide rate of age group(%)"},
-    {"field":"age", "title":"Age group"}]
+    "tooltip":[ {"aggregate": "average", "field": "rate", "type": "quantitative", "title": "Suicide rate of age group(%)", "format": ".3f"},
+    {"field":"age", "title":"Age group"}],
+    "radius": {
+      "aggregate": "average","field": "rate", "type": "quantitative",
+      "scale": {"type": "sqrt", "zero": true, "rangeMin": 5}
+    }
+    
   },
   "layer": [
     {
-      "mark":{"type": "arc", "radius": 98}
+      "mark":{"type": "arc", "radius": 200}
     },
     {
       "mark": {
       "type": "text",
-       "radius": 114
+      "radiusOffset": 30,
+      "fontWeight": "bold"
       },
 
       "encoding": {
