@@ -33,7 +33,22 @@
   "encoding": {
     "x": {"field": "year", "title": "Year","axis": {"title": "", "labelAngle": -30}},
     "y": {"aggregate":"sum", "field": "suicides_no", "type": "quantitative", "title": "Total number of suicides"},
-    "color": {"field": "age", "type": "nominal","scale": {"scheme": "tableau20"}, "legend":{"title": "Age group"}},
+    "color": {"field": "age", "type": "nominal","scale": { "domain": [
+          "5-14 years",
+          "15-24 years",
+          "25-34 years",
+          "35-54 years",
+          "55-74 years",
+          "75+ years"
+        ],
+        "range": [
+          "#bbeef6",
+          "#ef97b5",
+          "#468125",
+          "#ca0c28",
+          "#0c6cae",
+          "#b5b5e7"
+        ]}, "legend":{"title": "Age group"}},
     "tooltip": [
       {"field": "age", "type": "nominal", "title": "Age group"},
       {"aggregate":"sum", "field": "suicides_no", "type": "quantitative", "title": "Total number of suicides"}
