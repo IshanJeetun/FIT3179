@@ -10,7 +10,22 @@
       "aggregate": "sum", "field": "suicides_no",
       "title": "Total number of suicide"
     },
-    "color": {"field": "age", "scale": {"scheme": "tableau20"},"legend": null}
+    "color": {"field": "age", "scale": { "domain": [
+          "5-14 years",
+          "15-24 years",
+          "25-34 years",
+          "35-54 years",
+          "55-74 years",
+          "75+ years"
+        ],
+        "range": [
+          "#bbeef6",
+          "#ef97b5",
+          "#468125",
+          "#ca0c28",
+          "#0c6cae",
+          "#b5b5e7"
+        ]},"legend": null}
   },
   "config": {
     "background": "#EEEFF3"
