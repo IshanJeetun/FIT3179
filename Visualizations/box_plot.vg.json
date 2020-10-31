@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "description": "A vertical box plot showing median, min, and max body mass of penguins.",
-  "height": 150,
-  "width":300,
+  "height": 225,
+  "width":550,
   "transform": [
     {"filter": "datum.suicides_no > 10 "},
         {
