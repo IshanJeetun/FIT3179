@@ -1,0 +1,58 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "description": "A vertical box plot showing median, min, and max body mass of penguins.",
+  "height": 150,
+  "width":300,
+  "transform": [
+    {"filter": "datum.suicides_no > 10 "},
+        {
+      "filter": "Age_selection == null || datum.age == Age_selection"
+    }
+  ],
+  
+  "data": {"url": "https://raw.githubusercontent.com/IshanJeetun/FIT3179/main/master.csv"},
+
+"params": [    {
+      "name": "Age_selection",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "5-14 years",
+          "15-24 years",
+          "25-34 years",
+          "35-54 years",
+          "55-74 years",
+          "75+ years"
+        ],
+        "labels": [
+          "Show All",
+          "5-14 years",
+          "15-24 years",
+          "25-34 years",
+          "35-54 years",
+          "55-74 years",
+          "75+ years"
+        ],
+        "name": "Age group Selection: "
+      }
+    }],
+
+  "mark": {
+    "type": "boxplot",
+    "extent": "min-max",
+    "size": 30
+  },
+  "encoding": {
+    "y": {"field": "sex", "type": "nominal", "title": "Sex"},
+    "color": {"field": "sex", "type": "nominal", "legend": null,"scale": {"scheme": "greenblue"}
+    },
+    "x": {
+      "field": "suicides_no",
+      "type": "quantitative", "title":"Total number of suicides"
+    }
+  },
+   "config": {
+    "background": "#EEEFF3"
+  }
+}
