@@ -17,7 +17,6 @@
       "bind": {
         "input": "select",
         "options": [
-          null,
           "5-14 years",
           "15-24 years",
           "25-34 years",
@@ -26,7 +25,6 @@
           "75+ years"
         ],
         "labels": [
-          "Show All",
           "5-14 years",
           "15-24 years",
           "25-34 years",
