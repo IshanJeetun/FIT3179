@@ -10,6 +10,19 @@
           "feature": "ne_110m_admin_0_countries"
         }
   },
+   "params": [
+    {
+      "name": "rate",
+      "value": 0,
+      "bind": {
+        "input": "range",
+        "min": 0,
+        "max": 30,
+        "step": 0.2,
+        "name": "Suicide Rate: "
+      }
+    }
+  ],
   "transform": [{
       "lookup": "properties.NAME",
       "from": {
@@ -19,7 +32,8 @@
         "key": "CountryName",
         "fields": ["SuicideRate_2015"]
       }
-    }
+    },
+     {"filter": "datum.SuicideRate_2015 > rate"}
   ],
   
   "projection": {
@@ -33,7 +47,7 @@
   "encoding": {
     "color": {
       "scale": {"type": "threshold",
- "domain": [5, 10, 15, 20],
+ "domain": [5, 10, 20],
  "scheme": "oranges"},
       "field": "SuicideRate_2015",
       "type": "quantitative",
